@@ -1,0 +1,31 @@
+:root {
+  --vp-home-hero-image-background-image: transparent;
+}
+
+.dark {
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    #3488fe 15%,
+    #0a5dbb 15%
+  ) !important;
+}
+
+.VPHome .heading .name {
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    120deg,
+    #3492fe 30%,
+    #41d1ff
+  );
+
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+.VPHome .main .tagline {
+  /* text-align: center;
+  max-width: 100% !important; */
+}
+
+.VPHome .main .actions {
+  /* justify-content: center; */
+}
