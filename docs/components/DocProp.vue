@@ -1,20 +1,33 @@
 <script setup lang="ts">
-import { Time as IconTime, Calendar as IconCalendar, ChartStepper as IconChartStepper } from "@vicons/carbon";
+import {
+  Time as IconTime,
+  Calendar as IconCalendar,
+  ChartStepper as IconChartStepper,
+} from "@vicons/carbon";
 </script>
 
 <template>
   <div class="doc-props-area">
     <div class="sub-prop">
       <IconCalendar class="doc-props-icon" />
-      <span>最后编辑 | <slot name="last-edit"></slot></span>
+      <span
+        ><span class="doc-props-desc">最后编辑 | </span
+        ><slot name="last-edit"></slot
+      ></span>
     </div>
     <div class="sub-prop">
       <IconTime class="doc-props-icon" />
-      <span>预估时间 | <slot name="est-time"></slot></span>
+      <span
+        ><span class="doc-props-desc">预估时间 | </span
+        ><slot name="est-time"></slot
+      ></span>
     </div>
     <div class="sub-prop">
       <IconChartStepper class="doc-props-icon" />
-      <span>阅读难度 | <slot name="difficulty"></slot></span>
+      <span
+        ><span class="doc-props-desc">阅读难度 | </span
+        ><slot name="difficulty"></slot
+      ></span>
     </div>
   </div>
 </template>
@@ -44,5 +57,11 @@ import { Time as IconTime, Calendar as IconCalendar, ChartStepper as IconChartSt
   height: 16px;
   width: 16px;
   margin-right: 0.375rem;
+}
+
+@media (max-width: 768px) {
+  .doc-props-area .doc-props-desc {
+    display: none;
+  }
 }
 </style>
