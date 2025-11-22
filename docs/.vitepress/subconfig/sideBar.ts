@@ -9,6 +9,8 @@ const sidebar: DefaultTheme.SidebarItem[] = [
         text: "安装",
         items: [
           { text: "选择安装方式", link: "/userGuide/installation/summary" },
+          { text: "一键安装", link: "/userGuide/installation/autoInstall" },
+          { text: "手动安装", link: "/userGuide/installation/manualInstall" }
         ],
         collapsed: true,
       },

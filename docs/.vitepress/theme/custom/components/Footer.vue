@@ -12,8 +12,12 @@ const { isDark } = useData();
     </p>
     <p>Copyright © 2025, HugoAura Developers</p>
     <p>
-      HugoAura is released under
-      <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU GPL-v3 license</a>
+      HugoAura is licensed under
+      <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU GPL-v3.0</a>
+    </p>
+    <p>
+      HugoAura Docs is licensed under
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
     </p>
   </div>
 </template>

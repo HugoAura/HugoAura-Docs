@@ -130,6 +130,14 @@
 }
 
 /**
+ * Component: Base Layout
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-layout-max-width: 1660px;
+}
+
+/**
  * Component: Algolia
  * -------------------------------------------------------------------------- */
 
@@ -143,4 +151,48 @@
 
 .vp-doc h2 {
   margin-top: 16px;
+}
+
+.vp-doc h3 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+p.opacity-50 {
+  opacity: 0.5;
+}
+
+p.align-center {
+  text-align: center;
+}
+
+/**
+ * Component: Medium Zoom Overlay
+ * -------------------------------------------------------------------------- */
+
+.medium-zoom-overlay {
+  background-color: var(--vp-c-bg) !important;
+  z-index: 100;
+}
+
+.medium-zoom-overlay ~ img {
+  z-index: 101;
+}
+
+.medium-zoom--opened .medium-zoom-overlay {
+  opacity: 0.8 !important;
+}
+
+/**
+ * Component: Naive UI Components
+ * -------------------------------------------------------------------------- */
+
+.n-alert {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.n-alert ul {
+  margin-top: 0.45rem;
+  margin-bottom: 0.125rem;
 }

@@ -45,11 +45,9 @@ const NaiveUIProvider = defineComponent({
       },
       {
         default: () => [
-          h(Layout, null, () => {
-            return {
-              default: this.$slots.default?.(),
-              "layout-bottom": h(Footer),
-            };
+          h(Layout, null, {
+            default: this.$slots.default?.(),
+            "layout-bottom": () => h(Footer, null),
           }),
           import.meta.env.SSR ? [h(CssRenderStyle), h(VitepressPath)] : null,
         ],
