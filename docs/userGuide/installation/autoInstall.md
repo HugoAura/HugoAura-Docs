@@ -4,11 +4,8 @@ editLink: true
 ---
 
 <script setup>
-import { useData } from 'vitepress';
 import { ref } from 'vue';
 import { Info24Regular, QuestionCircle24Regular, ErrorCircle24Regular, CheckmarkCircle24Regular } from '@vicons/fluent';
-import { NAlert, NIcon } from 'naive-ui';
-const { isDark } = useData();
 const imgPathBaseline = ref("/static/img/userGuide/installation/autoInstallation");
 </script>
 
@@ -33,11 +30,9 @@ const imgPathBaseline = ref("/static/img/userGuide/installation/autoInstallation
 
 <AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/CheckYourConnection_WithBg.png`" :dark="`${imgPathBaseline}/CheckYourConnection_Transparent.png`" />
 
-<NAlert title="请确保您的网络可访问以下站点" type="info">
+<ClientOnlyNAlert title="请确保您的网络可访问以下站点" type="info">
   <template #icon>
-    <NIcon>
-      <QuestionCircle24Regular />
-    </NIcon>
+    <QuestionCircle24Regular />
   </template>
   无需逐一手动测试, 仅当一键安装器在下载过程中失败时再诊断即可
   <ul>
@@ -58,42 +53,36 @@ const imgPathBaseline = ref("/static/img/userGuide/installation/autoInstallation
       </ol>
     </li>
   </ul>
-</NAlert>
+</ClientOnlyNAlert>
 
 ### 更新至最新版希沃管家 {#with-network-update-to-latest-seewo-services}
 
 请打开 [e.seewo.com](https://e.seewo.com), 接着按下图所示完成管家最新版下载。
 
-<NAlert title="点击可查看大图" type="info">
+<ClientOnlyNAlert title="点击可查看大图" type="info" :titleOnly="true">
   <template #icon>
-    <NIcon>
-      <Info24Regular />
-    </NIcon>
+    <Info24Regular />
   </template>
   单击图片即可放大查看
-</NAlert>
+</ClientOnlyNAlert>
 
 <AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/DownloadLatestSSA_Transparent_Black.png`" :dark="`${imgPathBaseline}/DownloadLatestSSA_Transparent_White.png`" />
 
-<NAlert title="请务必更新到 e.seewo.com 上的最新管家版本" type="warning">
+<ClientOnlyNAlert title="请务必更新到 e.seewo.com 上的最新管家版本" type="warning">
   <template #icon>
-    <NIcon>
-      <ErrorCircle24Regular />
-    </NIcon>
+    <ErrorCircle24Regular />
   </template>
   受注入技术限制, HugoAura-Main 始终仅对最新版本的希沃管家提供支持, 如果您尝试在旧版本管家上安装 HugoAura, 可能会引发崩溃或功能失效等问题。<br />
   我们不受理来自旧版管家的 Issues。
-</NAlert>
+</ClientOnlyNAlert>
 
-<NAlert title="如果您能确定设备上运行的希沃管家即为最新版..." type="info">
+<ClientOnlyNAlert title="如果您能确定设备上运行的希沃管家即为最新版..." type="info">
   <template #icon>
-    <NIcon>
-      <QuestionCircle24Regular />
-    </NIcon>
+    <QuestionCircle24Regular />
   </template>
   那么无需再次更新希沃管家, 直接进入下一步即可。<br />
   请留意, 希沃集控端一般实施灰度性版本推送。开启了管家自动更新的学校, 设备上的管家版本<b>依然不一定是最新的</b>。
-</NAlert>
+</ClientOnlyNAlert>
 
 1. 将鼠标置于顶栏 "软件下载" 处
 2. 在展开的软件列表中选择 "希沃管家 (大板端)"
@@ -107,18 +96,16 @@ const imgPathBaseline = ref("/static/img/userGuide/installation/autoInstallation
 
 一般选择最新的 Release 即可。
 
-<NAlert title="正在使用 Windows 7 ?" type="warning">
+<ClientOnlyNAlert title="正在使用 Windows 7 ?" type="warning">
   <template #icon>
-    <NIcon>
-      <QuestionCircle24Regular />
-    </NIcon>
+    <QuestionCircle24Regular />
   </template>
   在 Windows 7 设备上使用一键安装可能需要特殊处理。接下来的每个步骤, 文档都会提供针对 Windows 7 设备的操作方案。请留意。<br />
   <b>我们强烈建议您尽快更新 Windows 版本, Windows 7 是完全 EOL 的 Windows 发行, HugoAura 不对任何 Win 7 设备上遇到的特化 Bug 进行处理。</b>
   <br />
   <br />
   针对本步骤, 在下载文件时, <b>请下载带有 <code>py3-8</code> 字样的 EXE 包</b>。Windows 7 无法运行 Python 3.10 的构建产物。
-</NAlert>
+</ClientOnlyNAlert>
 
 如果您的网络在访问 GitHub 时存在困难, 也可通过以下渠道下载:
 
@@ -167,13 +154,11 @@ const imgPathBaseline = ref("/static/img/userGuide/installation/autoInstallation
 2. 在「版本号选择区域」选择最新版本 <span class="opacity-50">(一般无需修改, 最顶上第一个即为最新版)</span>
 3. 正常情况下, <b>无需</b>填写 "安装路径设置" 的信息。直接在底部操作按钮区域点击 "<b>开始安装</b>" 即可。
 
-<NAlert title="点击可查看大图" type="info">
+<ClientOnlyNAlert title="点击可查看大图" type="info" :titleOnly="true">
   <template #icon>
-    <NIcon>
-      <Info24Regular />
-    </NIcon>
+    <Info24Regular />
   </template>
-</NAlert>
+</ClientOnlyNAlert>
 
 <AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/InstallerSteps_WithBg_compressed.png`" :dark="`${imgPathBaseline}/InstallerSteps_Transparent_compressed.png`" />
 
@@ -187,26 +172,22 @@ const imgPathBaseline = ref("/static/img/userGuide/installation/autoInstallation
 
 <AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/SSADone_WithBg.png`" :dark="`${imgPathBaseline}/SSADone_Transparent.png`" />
 
-<NAlert title="完成! 🎉" type="success">
+<ClientOnlyNAlert title="完成! 🎉" type="success">
   <template #icon>
-    <NIcon>
-      <CheckmarkCircle24Regular />
-    </NIcon>
+    <CheckmarkCircle24Regular />
   </template>
   祝贺您完成了 <code>HugoAura-Main</code> 的安装流程。<br />
   如果您在前面的任一步骤中遇到了问题, 请参阅 <a href="#faq">FAQ</a>。
-</NAlert>
+</ClientOnlyNAlert>
 
 #### 通过交互式 CLI 安装 <Badge type="warning" text="Windows 7+" /> {#with-network-using-installer-cli-interactive-start}
 
-<NAlert title='本段教程的启动步骤仅适用于 Python 3.8 构建, 即文件名中带 "-py3-8" 的安装器' type="warning">
+<ClientOnlyNAlert title='本段教程的启动步骤仅适用于 Python 3.8 构建, 即文件名中带 "-py3-8" 的安装器' type="warning">
   <template #icon>
-    <NIcon>
-      <ErrorCircle24Regular />
-    </NIcon>
+    <ErrorCircle24Regular />
   </template>
   如果您希望从 Python 3.10 构建启动命令行交互式安装, 您需要打开终端, 并在 EXE 启动参数中带上&nbsp;&nbsp; <code>--cli</code>。不能附带其他参数。
-</NAlert>
+</ClientOnlyNAlert>
 
 请双击运行安装器。
 
@@ -222,13 +203,11 @@ const imgPathBaseline = ref("/static/img/userGuide/installation/autoInstallation
 
 请根据下图所示进行操作:
 
-<NAlert title="点击可查看大图" type="info">
+<ClientOnlyNAlert title="点击可查看大图" type="info" :titleOnly="true">
   <template #icon>
-    <NIcon>
-      <Info24Regular />
-    </NIcon>
+    <Info24Regular />
   </template>
-</NAlert>
+</ClientOnlyNAlert>
 
 <AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/CLIInteractiveUsage_WithBg.png`" :dark="`${imgPathBaseline}/CLIInteractiveUsage_Transparent.png`" />
 
@@ -248,26 +227,22 @@ const imgPathBaseline = ref("/static/img/userGuide/installation/autoInstallation
 
 <AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/SSADone_WithBg.png`" :dark="`${imgPathBaseline}/SSADone_Transparent.png`" />
 
-<NAlert title="完成! 🎉" type="success">
+<ClientOnlyNAlert title="完成! 🎉" type="success">
   <template #icon>
-    <NIcon>
-      <CheckmarkCircle24Regular />
-    </NIcon>
+    <CheckmarkCircle24Regular />
   </template>
   祝贺您完成了 <code>HugoAura-Main</code> 的安装流程。<br />
   如果您在前面的任一步骤中遇到了问题, 请参阅 <a href="#faq">FAQ</a>。
-</NAlert>
+</ClientOnlyNAlert>
 
 #### 通过非交互式 CLI 安装 <Badge type="tip" text="Any Version" /> {#with-network-using-installer-cli-start}
 
-<NAlert title="本段教程尚未完工" type="warning">
+<ClientOnlyNAlert title="本段教程尚未完工" type="warning">
   <template #icon>
-    <NIcon>
-      <QuestionCircle24Regular />
-    </NIcon>
+    <QuestionCircle24Regular />
   </template>
   这段教程正在编写进程中, 请您优先尝试其他安装方式, 或直接根据 <a href="https://github.com/HugoAura/HugoAura-Install">HugoAura-Install README</a> 中的命令提示进行操作。
-</NAlert>
+</ClientOnlyNAlert>
 
 ## 离线安装 {#without-network}
 
@@ -283,7 +258,7 @@ const imgPathBaseline = ref("/static/img/userGuide/installation/autoInstallation
 
 #### 下载 HugoAura Install 安装器 {#without-network-download-res-installer}
 
-请跟随 [联网安装中的管家下载步骤](#with-network-download-installer-package) 下载 HugoAura Install 安装器, 然后将文件 (`AuraInstaller-XXX.exe`) 复制到您的可移动介质中。
+请跟随 [联网安装中安装器的下载步骤](#with-network-download-installer-package) 下载 HugoAura Install 安装器, 然后将文件 (`AuraInstaller-XXX.exe`) 复制到您的可移动介质中。
 
 #### 下载 HugoAura Releases 源码包 {#without-network-download-res-src}
 
@@ -293,13 +268,11 @@ const imgPathBaseline = ref("/static/img/userGuide/installation/autoInstallation
 
 参见下图进行下载操作:
 
-<NAlert title="点击可查看大图" type="info">
+<ClientOnlyNAlert title="点击可查看大图" type="info" :titleOnly="true">
   <template #icon>
-    <NIcon>
-      <Info24Regular />
-    </NIcon>
+    <Info24Regular />
   </template>
-</NAlert>
+</ClientOnlyNAlert>
 
 <AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/OfflineInstall_GitHubReleases_WithBg.png`" :dark="`${imgPathBaseline}/OfflineInstall_GitHubReleases_Transparent.png`" />
 
@@ -311,15 +284,13 @@ const imgPathBaseline = ref("/static/img/userGuide/installation/autoInstallation
 
 先将上一步下载的希沃管家安装包复制到设备上, 双击运行并根据提示更新希沃管家。
 
-<NAlert title="如果您能确定设备上运行的希沃管家即为最新版..." type="info">
+<ClientOnlyNAlert title="如果您能确定设备上运行的希沃管家即为最新版..." type="info">
   <template #icon>
-    <NIcon>
-      <QuestionCircle24Regular />
-    </NIcon>
+    <QuestionCircle24Regular />
   </template>
   那么无需再次更新希沃管家, 直接进入下一步即可。<br />
   请留意, 希沃集控端一般实施灰度性版本推送。开启了管家自动更新的学校, 设备上的管家版本<b>依然不一定是最新的</b>。
-</NAlert>
+</ClientOnlyNAlert>
 
 #### 放置源码包和安装器 {#without-network-go-inst-move-files}
 
@@ -348,13 +319,11 @@ C:\Users\seewo\Downloads
 
 接下来, 如下图所示:
 
-<NAlert title="点击可查看大图" type="info">
+<ClientOnlyNAlert title="点击可查看大图" type="info" :titleOnly="true">
   <template #icon>
-    <NIcon>
-      <Info24Regular />
-    </NIcon>
+    <Info24Regular />
   </template>
-</NAlert>
+</ClientOnlyNAlert>
 
 <AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/Offline_InstallerSteps_WithBg_compressed.png`" :dark="`${imgPathBaseline}/Offline_InstallerSteps_Transparent_compressed.png`" />
 
@@ -375,24 +344,28 @@ C:\Users\seewo\Downloads
 
 <AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/SSADone_WithBg.png`" :dark="`${imgPathBaseline}/SSADone_Transparent.png`" />
 
+<ClientOnlyNAlert title="完成! 🎉" type="success">
+  <template #icon>
+    <CheckmarkCircle24Regular />
+  </template>
+  祝贺您完成了 <code>HugoAura-Main</code> 的安装流程。<br />
+  如果您在前面的任一步骤中遇到了问题, 请参阅 <a href="#faq">FAQ</a>。
+</ClientOnlyNAlert>
+
 ##### 使用 CLI 进行离线安装 <Badge type="warning" text="Windows 7" /> {#without-network-go-inst-run-installer-with-cli}
 
-<NAlert title="本段教程尚未完工" type="warning">
+<ClientOnlyNAlert title="本段教程尚未完工" type="warning">
   <template #icon>
-    <NIcon>
-      <QuestionCircle24Regular />
-    </NIcon>
+    <QuestionCircle24Regular />
   </template>
   这段教程正在编写进程中, 如果您因此发生安装受阻情况, 请直接从文档站右上角前往论坛 / QQ 交流群寻求帮助。
-</NAlert>
+</ClientOnlyNAlert>
 
 ## 一键安装 FAQ {#faq}
 
-<NAlert title="本段教程尚未完工" type="warning">
+<ClientOnlyNAlert title="本段教程尚未完工" type="warning">
   <template #icon>
-    <NIcon>
-      <QuestionCircle24Regular />
-    </NIcon>
+    <QuestionCircle24Regular />
   </template>
   这段教程正在编写进程中, 如果您有急需开发者解答的安装问题, 可前往 <a href="https://github.com/HugoAura/HugoAura-Install/issues">HugoAura-Install Issues</a> 进行反馈。您的案例会被添加到本区域。
-</NAlert>
+</ClientOnlyNAlert>

@@ -4,11 +4,8 @@ editLink: true
 ---
 
 <script setup>
-import { useData } from 'vitepress';
 import { ref } from 'vue';
 import { Info24Regular, QuestionCircle24Regular } from '@vicons/fluent';
-import { NAlert, NIcon } from 'naive-ui';
-const { isDark } = useData();
 const imgPathBaseline = ref("/static/img/userGuide/installation");
 </script>
 
@@ -28,11 +25,9 @@ HugoAura-Main 支持多种安装方式, 请选择一种您偏好的方式:
 
 - [一键安装](/userGuide/installation/autoInstall)
 
-<NAlert title="对于新手更稳妥的选择" type="success">
+<ClientOnlyNAlert title="对于新手更稳妥的选择" type="success">
   <template #icon>
-    <NIcon>
-      <Info24Regular />
-    </NIcon>
+    <Info24Regular />
   </template>
   一键安装需要以下条件:
   <ul class="less-margin">
@@ -40,15 +35,13 @@ HugoAura-Main 支持多种安装方式, 请选择一种您偏好的方式:
     <li><b>在线安装</b>需要网络连接, <b>离线安装</b>需要文件传输介质 (如 U 盘)</li>
     <li>大约 1 ~ 3 分钟时间</li>
   </ul>
-</NAlert>
+</ClientOnlyNAlert>
 
 - [手动安装](/userGuide/installation/manualInstall)
 
-<NAlert title="如果您平常装软件都喜欢 Build from source" type="info">
+<ClientOnlyNAlert title="如果您平常装软件都喜欢 Build from source" type="info">
   <template #icon>
-    <NIcon>
-      <QuestionCircle24Regular />
-    </NIcon>
+    <QuestionCircle24Regular />
   </template>
   手动安装需要以下条件:
   <ul class="less-margin">
@@ -56,4 +49,4 @@ HugoAura-Main 支持多种安装方式, 请选择一种您偏好的方式:
     <li><b>在线安装</b>需要网络连接, <b>离线安装</b>需要文件传输介质 (如 U 盘)</li>
     <li>大约 5 ~ 15 分钟时间</li>
   </ul>
-</NAlert>
+</ClientOnlyNAlert>
