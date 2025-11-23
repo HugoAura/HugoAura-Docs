@@ -153,12 +153,13 @@
   margin-top: 16px;
 }
 
-.vp-doc h3 {
-  margin-top: 16px;
+.vp-doc h3,
+.vp-doc h5 {
+  margin-top: 18px;
   margin-bottom: 16px;
 }
 
-p.opacity-50 {
+.opacity-50 {
   opacity: 0.5;
 }
 

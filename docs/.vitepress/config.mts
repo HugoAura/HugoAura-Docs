@@ -25,6 +25,9 @@ export default defineConfig({
       provider: "local",
       options: importedLocalSearchOptions,
     },
+    outline: {
+      level: [2, 5]
+    }
   },
   // △ End of config for Vitepress Default Theme
   markdown: {

@@ -26,7 +26,7 @@ const imgPathBaseline = ref("/static/img/userGuide/installation");
 
 HugoAura-Main 支持多种安装方式, 请选择一种您偏好的方式:
 
-- [一键安装](/userGuide/installation/manualInstall)
+- [一键安装](/userGuide/installation/autoInstall)
 
 <NAlert title="对于新手更稳妥的选择" type="success">
   <template #icon>
@@ -42,7 +42,7 @@ HugoAura-Main 支持多种安装方式, 请选择一种您偏好的方式:
   </ul>
 </NAlert>
 
-- 手动安装
+- [手动安装](/userGuide/installation/manualInstall)
 
 <NAlert title="如果您平常装软件都喜欢 Build from source" type="info">
   <template #icon>

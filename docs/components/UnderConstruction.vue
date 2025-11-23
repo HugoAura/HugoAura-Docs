@@ -39,5 +39,6 @@ import { Construction as IconConstruction } from "@vicons/carbon";
   font-size: 14px;
   font-weight: 600;
   margin: 0;
+  text-align: center;
 }
 </style>
