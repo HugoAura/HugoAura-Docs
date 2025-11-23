@@ -20,7 +20,7 @@ const imgPathBaseline = ref("/static/img/userGuide/installation/autoInstallation
   <template #difficulty>入门</template>
 </DocProp>
 
-<img :src="`${imgPathBaseline}/Banner${isDark ? '_Transparent.png' : '_WithBg.png'}`" />
+<AutoDarkImage :zoom="false" :light="`${imgPathBaseline}/Banner_WithBg.png`" :dark="`${imgPathBaseline}/Banner_Transparent.png`" />
 
 ## 选择网络环境 {#choose-network-env}
 
@@ -31,7 +31,7 @@ const imgPathBaseline = ref("/static/img/userGuide/installation/autoInstallation
 
 ### 网络可访问性检查 {#with-network-accessiblity-check}
 
-<img class="zoomable" :src="`${imgPathBaseline}/CheckYourConnection${isDark ? '_Transparent.png' : '_WithBg.png'}`" />
+<AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/CheckYourConnection_WithBg.png`" :dark="`${imgPathBaseline}/CheckYourConnection_Transparent.png`" />
 
 <NAlert title="请确保您的网络可访问以下站点" type="info">
   <template #icon>
@@ -73,7 +73,7 @@ const imgPathBaseline = ref("/static/img/userGuide/installation/autoInstallation
   单击图片即可放大查看
 </NAlert>
 
-<img class="zoomable" :src="`${imgPathBaseline}/DownloadLatestSSA_Transparent${isDark ? '_White.png' : '_Black.png'}`" />
+<AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/DownloadLatestSSA_Transparent_Black.png`" :dark="`${imgPathBaseline}/DownloadLatestSSA_Transparent_White.png`" />
 
 <NAlert title="请务必更新到 e.seewo.com 上的最新管家版本" type="warning">
   <template #icon>
@@ -144,7 +144,7 @@ const imgPathBaseline = ref("/static/img/userGuide/installation/autoInstallation
 
 如果您的设备开启了 Windows Defender SmartScreen, 可能会在运行时看到类似下图的警告框:
 
-<img class="zoomable" :src="`${imgPathBaseline}/BypassWindowsDefender${isDark ? '_Transparent.png' : '_WithBg.png'}`" />
+<AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/BypassWindowsDefender_WithBg.png`" :dark="`${imgPathBaseline}/BypassWindowsDefender_Transparent.png`" />
 
 这是因为安装器没有数字签名所致。如果您是从上方任一来源下载的, 那么可以完全信任此文件。
 
@@ -157,7 +157,7 @@ const imgPathBaseline = ref("/static/img/userGuide/installation/autoInstallation
 
 针对 Windows 10+ 用户, HugoAura Install 提供了友好的图形化界面供您执行操作。
 
-<img class="zoomable" :src="`${imgPathBaseline}/InstallerUI${isDark ? '_Transparent.png' : '_WithBg.png'}`" />
+<AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/InstallerUI_WithBg.png`" :dark="`${imgPathBaseline}/InstallerUI_Transparent.png`" />
 
 <p class="opacity-50 align-center" style="font-size: small;">请小心照骗</p>
 
@@ -175,17 +175,17 @@ const imgPathBaseline = ref("/static/img/userGuide/installation/autoInstallation
   </template>
 </NAlert>
 
-<img class="zoomable" :src="`${imgPathBaseline}/InstallerSteps${isDark ? '_Transparent' : '_WithBg'}_compressed.png`" />
+<AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/InstallerSteps_WithBg_compressed.png`" :dark="`${imgPathBaseline}/InstallerSteps_Transparent_compressed.png`" />
 
 完成上述步骤后, 等待安装器执行工作。在安装完成后, 您应该会看到:
 
-<img class="zoomable" style="max-width: 75%; margin: auto;" :src="`${imgPathBaseline}/InstallerDone${isDark ? '_Transparent' : '_WithBg'}.png`" />
+<AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/InstallerDone_WithBg.png`" :dark="`${imgPathBaseline}/InstallerDone_Transparent.png`" />
 
 此时, 请手动双击桌面上的管家图标, 以打开希沃管家前端窗口。
 
 接下来请跟随下图图示找到 HugoAura 设置入口:
 
-<img class="zoomable" :src="`${imgPathBaseline}/SSADone${isDark ? '_Transparent' : '_WithBg'}.png`" />
+<AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/SSADone_WithBg.png`" :dark="`${imgPathBaseline}/SSADone_Transparent.png`" />
 
 <NAlert title="完成! 🎉" type="success">
   <template #icon>
@@ -218,7 +218,7 @@ const imgPathBaseline = ref("/static/img/userGuide/installation/autoInstallation
 
 运行后, 您应该可以看到类似如图所示的命令行窗口:
 
-<img class="zoomable" :src="`${imgPathBaseline}/CLIInteractive${isDark ? '_Transparent' : '_WithBg'}.png`" />
+<AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/CLIInteractive_WithBg.png`" :dark="`${imgPathBaseline}/CLIInteractive_Transparent.png`" />
 
 请根据下图所示进行操作:
 
@@ -230,7 +230,7 @@ const imgPathBaseline = ref("/static/img/userGuide/installation/autoInstallation
   </template>
 </NAlert>
 
-<img class="zoomable" :src="`${imgPathBaseline}/CLIInteractiveUsage${isDark ? '_Transparent' : '_WithBg'}.png`" />
+<AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/CLIInteractiveUsage_WithBg.png`" :dark="`${imgPathBaseline}/CLIInteractiveUsage_Transparent.png`" />
 
 1. 选择您希望安装的版本号 <span class="opacity-50">(一般推荐使用 CI 版, 与一般软件不同, HugoAura-Main 的稳定版 (发行版) 不一定能良好兼容最新版管家)</span>
 2. 在命令行中输入该版本号左侧的数字 **(注: 不要带 `[` 或 `]`, 仅输入纯阿拉伯数字)** <span class="opacity-50">(如果班级内没有键盘, 请使用软键盘, 聚焦到 CMD 窗口后, 点击软键盘上的相应按键) (如果您不知道如何开启软键盘, 请[上网搜索](https://www.bing.com/search?q=Windows+7+%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AF%E8%BD%AF%E9%94%AE%E7%9B%98&PC=U316&FORM=&rdr=1&rdrig=1))</span>
@@ -240,13 +240,13 @@ const imgPathBaseline = ref("/static/img/userGuide/installation/autoInstallation
 
 当您看到下图输出时, 安装即为完成。
 
-<img class="zoomable" :src="`${imgPathBaseline}/CLIInteractiveDone${isDark ? '_Transparent' : '_WithBg'}.png`" />
+<AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/CLIInteractiveDone_WithBg.png`" :dark="`${imgPathBaseline}/CLIInteractiveDone_Transparent.png`" />
 
 此时, 请手动双击桌面上的管家图标, 以打开希沃管家前端窗口。
 
 接下来请跟随下图图示找到 HugoAura 设置入口:
 
-<img class="zoomable" :src="`${imgPathBaseline}/SSADone${isDark ? '_Transparent' : '_WithBg'}.png`" />
+<AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/SSADone_WithBg.png`" :dark="`${imgPathBaseline}/SSADone_Transparent.png`" />
 
 <NAlert title="完成! 🎉" type="success">
   <template #icon>
@@ -301,7 +301,7 @@ const imgPathBaseline = ref("/static/img/userGuide/installation/autoInstallation
   </template>
 </NAlert>
 
-<img class="zoomable" :src="`${imgPathBaseline}/OfflineInstall_GitHubReleases${isDark ? '_Transparent' : '_WithBg'}.png`" />
+<AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/OfflineInstall_GitHubReleases_WithBg.png`" :dark="`${imgPathBaseline}/OfflineInstall_GitHubReleases_Transparent.png`" />
 
 请将源码包复制到您的可移动介质中。
 
@@ -356,7 +356,7 @@ C:\Users\seewo\Downloads
   </template>
 </NAlert>
 
-<img class="zoomable" :src="`${imgPathBaseline}/Offline_InstallerSteps${isDark ? '_Transparent' : '_WithBg'}_compressed.png`" />
+<AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/Offline_InstallerSteps_WithBg_compressed.png`" :dark="`${imgPathBaseline}/Offline_InstallerSteps_Transparent_compressed.png`" />
 
 1. 点击 "版本选择" 中的 "本地文件"。
 2. 点击 "浏览..."
@@ -367,13 +367,13 @@ C:\Users\seewo\Downloads
 
 在安装完成后, 您应该会看到:
 
-<img class="zoomable" style="max-width: 75%; margin: auto;" :src="`${imgPathBaseline}/InstallerDone${isDark ? '_Transparent' : '_WithBg'}.png`" />
+<AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/InstallerDone_WithBg.png`" :dark="`${imgPathBaseline}/InstallerDone_Transparent.png`" />
 
 等待安装器完成安装后, 手动双击桌面上的管家图标, 以打开希沃管家前端窗口。
 
 接下来请跟随下图图示找到 HugoAura 设置入口:
 
-<img class="zoomable" :src="`${imgPathBaseline}/SSADone${isDark ? '_Transparent' : '_WithBg'}.png`" />
+<AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/SSADone_WithBg.png`" :dark="`${imgPathBaseline}/SSADone_Transparent.png`" />
 
 ##### 使用 CLI 进行离线安装 <Badge type="warning" text="Windows 7" /> {#without-network-go-inst-run-installer-with-cli}
 

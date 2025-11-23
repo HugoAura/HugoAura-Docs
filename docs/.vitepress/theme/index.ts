@@ -7,6 +7,7 @@ import mediumZoom from "medium-zoom";
 import DefaultThemeOverride from "./custom/DefaultThemeOverride.vue";
 import "./style.css";
 import CustomThemeSiteNavigator from "./custom/components/SiteNavigator.vue";
+import AutoSwitchImage from "./custom/components/AutoSwitchImage.vue";
 import DocProp from "../../components/DocProp.vue";
 import UnderConstruction from "../../components/UnderConstruction.vue";
 import { nextTick, onMounted, watch } from "vue";
@@ -22,6 +23,7 @@ export default {
     }
 
     app.component("CustomThemeSiteNavigator", CustomThemeSiteNavigator);
+    app.component("AutoDarkImage", AutoSwitchImage);
     app.component("DocProp", DocProp);
     app.component("UnderConstruction", UnderConstruction);
   },

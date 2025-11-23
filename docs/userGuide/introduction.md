@@ -20,7 +20,7 @@ const imgPathBaseline = ref("/static/img/userGuide/introduction");
   <template #difficulty>入门</template>
 </DocProp>
 
-<img :src="`${imgPathBaseline}/Banner${isDark ? '_Transparent.png' : '_WithBg.jpeg'}`" />
+<AutoDarkImage :light="`${imgPathBaseline}/Banner_WithBg.jpeg`" :dark="`${imgPathBaseline}/Banner_Transparent.png`" />
 
 ## 写在前面 {#before-all}
 
@@ -45,7 +45,7 @@ const imgPathBaseline = ref("/static/img/userGuide/introduction");
 
 目前 Project HugoAura 主要有以下两个产品线正处于积极维护状态:
 
-<img class="zoomable" :src="`${imgPathBaseline}/ProductLine${isDark ? '_Transparent.png' : '_WithBg.png'}`" />
+<AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/ProductLine_WithBg.png`" :dark="`${imgPathBaseline}/ProductLine_Transparent.png`" />
 
 - **HugoAura-Main** | 希沃管家的 Electron 前端侧 Hook。简而言之, 它负责篡改你从桌面双击 "希沃管家" 快捷方式之后, 弹出的那个窗口的行为。
 - **HugoAura-Aikari** | 希沃易 + 的全面体验调整工具。其主要模块 PLS 专注于篡改集控端服务器与本地管家后台服务的通信数据, 从而实现更全面的活动监控与欺骗。其余模块可帮助用户提升其他希沃软件的使用时体验。
@@ -65,7 +65,7 @@ const imgPathBaseline = ref("/static/img/userGuide/introduction");
 
 在您继续前, 首先需要明确 HugoAura 系列产品的能力范围。
 
-<img class="zoomable" :src="`${imgPathBaseline}/HugoAura_Ability_Positive${isDark ? '_Transparent.png' : '_WithBg.png'}`" />
+<AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/HugoAura_Ability_Positive_WithBg.png`" :dark="`${imgPathBaseline}/HugoAura_Ability_Positive_Transparent.png`" />
 
 <NAlert title="如上图所示, Project HugoAura 的各类产品能力范围包括:" type="success">
   <template #icon>
@@ -81,7 +81,7 @@ const imgPathBaseline = ref("/static/img/userGuide/introduction");
   </ul>
 </NAlert>
 
-<img class="zoomable" :src="`${imgPathBaseline}/HugoAura_Ability_Negative${isDark ? '_Transparent.png' : '_WithBg.png'}`" />
+<AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/HugoAura_Ability_Negative_WithBg.png`" :dark="`${imgPathBaseline}/HugoAura_Ability_Negative_Transparent.png`" />
 
 <NAlert title="但是, Project HugoAura:" type="error">
   <template #icon>
@@ -129,7 +129,7 @@ const imgPathBaseline = ref("/static/img/userGuide/introduction");
 
 选择自由, 意味着承担责任。如果您可以接受上述风险, 另请检查自身资质:
 
-<img class="zoomable" :src="`${imgPathBaseline}/SelfCheck${isDark ? '_Transparent.png' : '_WithBg.png'}`" />
+<AutoDarkImage :zoom="true" :light="`${imgPathBaseline}/SelfCheck_WithBg.png`" :dark="`${imgPathBaseline}/SelfCheck_Transparent.png`" />
 
 - **请确保自身拥有基本的操作系统常识**: 例如, 知道并了解 "Windows"、"移动"、"复制"、"CMD"、"下载"、"浏览器" 等名词的基本含义。同时可无障碍地在设备上执行各类基本操作。<br />如果您缺乏此类常识, 请勿使用 HugoAura。我们不为此类用户解决 Issue。
 - **请确认自己是否有基本的信息查找能力**: 例如, 遇到意外问题时, 先行查阅互联网、已有 GitHub Issues、文档 FAQ 等。而非直接发上来一个无日志的错误截图, 附文 "这个怎么办"。<br />我们不处理这类 Issue。

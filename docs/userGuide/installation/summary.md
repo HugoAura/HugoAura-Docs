@@ -20,7 +20,7 @@ const imgPathBaseline = ref("/static/img/userGuide/installation");
   <template #difficulty>引导</template>
 </DocProp>
 
-<img :src="`${imgPathBaseline}/Banner${isDark ? '_Transparent.png' : '_WithBg.png'}`" />
+<AutoDarkImage :zoom="false" :light="`${imgPathBaseline}/Banner_WithBg.png`" :dark="`${imgPathBaseline}/Banner_Transparent.png`" />
 
 ## 即将开始... {#we-re-starting}
 
