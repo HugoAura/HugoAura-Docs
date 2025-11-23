@@ -35,7 +35,7 @@ const socialLinks: DefaultTheme.SocialLink[] = [
   </g>
 </svg>`,
     },
-    link: "https://forum.smart-teach.cn",
+    link: "https://forum.smart-teach.cn/t/hugoaura",
   },
 ];
 
